@@ -27,7 +27,7 @@ services:
     container_name: organizr
     hostname: organizr
     restart: always
-    image: lsiocommunity/organizr
+    image: linuxserver/organizr
     volumes:
       - ${USERDIR}/docker/organizr:/config
       - ${USERDIR}/docker/shared:/shared
