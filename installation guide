@@ -1,0 +1,23 @@
+install Ubuntu 18.04
+  apt-get update
+  apt-get upgrade
+install docker 
+  https://docs.docker.com/install/linux/docker-ce/ubuntu/
+test installation
+   sudo docker run hello-world
+start on boot:
+  sudo systemctl enable docker
+Add user to the docker group:
+  sudo usermod -aG docker ${USER}
+check id:
+  id
+set environment variables
+  sudo nano /etc/environment
+    PUID=1000
+    PGID=1000
+    TZ="Asia/Singapore"
+    USERDIR="/home/USER"
+    MYSQL_ROOT_PASSWORD="passsword"
+create docker-compose file
+  nano ~/docker/docker-compose.yml
+  
