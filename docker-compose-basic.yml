@@ -14,7 +14,7 @@ services:
     restart: always
     command: -H unix:///var/run/docker.sock
     ports:
-      - "XXXX:9000"
+      - "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${USERDIR}/docker/portainer/data:/data
@@ -32,7 +32,7 @@ services:
       - ${USERDIR}/docker/organizr:/config
       - ${USERDIR}/docker/shared:/shared
     ports:
-      - "XXXX:80"
+      - "80:80"
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
