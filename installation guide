@@ -9,6 +9,9 @@ start on boot:
   sudo systemctl enable docker
 Add user to the docker group:
   sudo usermod -aG docker ${USER}
+Set folder rights:
+  sudo setfacl -Rdm g:docker:rwx ~/docker
+  sudo chmod -R 775 ~/docker
 check id:
   id
 set environment variables
@@ -20,4 +23,5 @@ set environment variables
     MYSQL_ROOT_PASSWORD="passsword"
 create docker-compose file
   nano ~/docker/docker-compose.yml
+
   
